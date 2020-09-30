@@ -1,0 +1,97 @@
+#attendance{
+    border-bottom: 0 !important;
+    >thead{
+        tr{
+            th{
+                padding: 5px;
+                border-top: 1px solid #cecece;
+                border-left: 1px solid #cecece; 
+                border-bottom: 1px solid #cecece;
+                background: #297da7;
+                color: white;
+                &:last-child{
+                    border-right: 1px solid #cecece;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    > tbody{
+        >tr{
+            > td {
+                padding:5px;
+                line-height: 1.2;
+                border-left: 1px solid #cecece; 
+                border-bottom: 1px solid #cecece;
+                &:last-child{
+                    border-right: 1px solid #cecece;
+                    text-align: center;
+                }
+                > a {
+                    &:last-child{
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dataTables_paginate{
+    margin-top: 10px;
+    .paginate_button{
+        font-size: 12px;
+        border: 1px solid #cecece !important;
+        border-radius: 15px !important;
+        
+        &.previous{
+            margin-right: 10px;
+        }
+        &.next{
+            margin-left: 10px !important;
+        }
+    }
+    
+}
+#attendance_info{
+    font-size: 11px;
+}
+
+.startdate-enddate{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    > li {
+        list-style: none;
+        &:nth-child(2),&:nth-child(3){
+            margin-left: 20px;
+        }
+        > input#start{
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+            background: white;
+        }
+        > input#end{
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+            background: white;
+        }
+        > #filter{
+            background-color: #079211;
+            color: white;
+            height: 100%;
+            padding: 0.2em 2em;
+            border-radius: 5px;
+        }
+        > #clearFilter {
+            background-color: #ddd;
+            color: black;
+            height: 100%;
+            padding: 0.2em 2em;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+    }
+}
