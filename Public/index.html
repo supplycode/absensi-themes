@@ -38,6 +38,7 @@
     <![endif]-->
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
   </head>
   <body>
 
@@ -58,8 +59,16 @@
   
   <div class="sidebar">
       <ul class="menu-sidebar">
-        <li><a href="#"><i class="fas fa-sliders-h"></i> <span>Dashboard</span></a></li>
-        <li><a href="#"><i class="fas fa-user-tie"></i> <span>Employees</span> </a></li>
+        <li><a href="/"><i class="fas fa-sliders-h"></i> <span>Dashboard</span></a></li>
+        <li class="sub-menu">
+          <a href="#form1"><i class="fab fa-wpforms"></i>
+            <span>Form</span>
+            <div class="fas fa-angle-up pull-right"></div>
+          </a>
+          <ul>
+            <li id="#form1"><a href="/form.html">RF Regular Form</a></li>
+          </ul>
+        </li>
         <li><a href="#"><i class="fas fa-user-clock"></i> <span>Attendance</span></a></li>
       </ul>
   </div>
@@ -164,6 +173,8 @@
         <script src="assets/js/app.min.js" ></script>
       
     
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.js"></script>
     <script src="assets/js/jquery.dataTables.min.js"></script>
     
   </body>
