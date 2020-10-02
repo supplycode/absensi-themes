@@ -59,7 +59,7 @@
   
   <div class="sidebar">
       <ul class="menu-sidebar">
-        <li><a href="/"><i class="fas fa-sliders-h"></i> <span>Dashboard</span></a></li>
+        <li><a href="/"><i class="fas fa-sliders-h"></i><span>Dashboard</span></a></li>
         <li class="sub-menu">
           <a href="#form1"><i class="fab fa-wpforms"></i>
             <span>Form</span>
@@ -69,7 +69,7 @@
             <li id="#form1"><a href="/form.html">RF Regular Form</a></li>
           </ul>
         </li>
-        <li><a href="#"><i class="fas fa-user-clock"></i> <span>Attendance</span></a></li>
+        <li><a href="#"><i class="fas fa-user-clock"></i><span>Attendance</span></a></li>
       </ul>
   </div>
   
@@ -77,83 +77,340 @@
   <div class="content">
     <div class="clearfix">
       <h1 class="heading p-left">Home</h1>
-      <ul class="startdate-enddate">
-        <li>
-          <input id="start" type="date" /><br />
-        </li>
-        <li>
-          <input id="end" type="date" /><br />
-        </li>
-        <li>
-          <button class="button radius" id="filter"><i class="fas fa-filter"></i> Filter</button>
-        </li>
-        <li>
-          <button id="clearFilter" class="button radius secondary"><i class="far fa-minus-square"></i> Clear Filter</button>
-        </li>
-      </ul>
-      <table id="attendance">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Employee</th>
-            <th>Time In</th>
-            <th>Time Out</th>
-            <th>Total Hours</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr role="row" class="odd">
-            <td>2020-09-28</td>
-            <td>Dono</td>
-            <td>07:00:00 AM</td>
-            <td>05:00:00 PM</td>
-            <td>10hr</td>
-            <td>OK/OK</td>
-            <td>
-              <a href='#'><i class="fas fa-edit"></i></a>
-              <a href="#"><i class="far fa-trash-alt"></i></a>
-            </td>
-          </tr>
-          <tr role="row" class="even">
-            <td>2020-09-27</td>
-            <td>Kasion</td>
-            <td>07:00:00 AM</td>
-            <td>05:00:00 PM</td>
-            <td>10hr</td>
-            <td>OK/OK</td>
-            <td>
-              <a href='#'><i class="fas fa-edit"></i></a>
-              <a href="#"><i class="far fa-trash-alt"></i></a>
-            </td>
-          </tr>
-          <tr role="row" class="odd">
-            <td>2019-09-26</td>
-            <td>Kasion</td>
-            <td>07:00:00 AM</td>
-            <td>05:00:00 PM</td>
-            <td>10hr</td>
-            <td>OK/OK</td>
-            <td>
-              <a href='#'><i class="fas fa-edit"></i></a>
-              <a href="#"><i class="far fa-trash-alt"></i></a>
-            </td>
-          </tr>
-          <tr role="row" class="odd">
-            <td>2019-08-01</td>
-            <td>Kasion</td>
-            <td>07:00:00 AM</td>
-            <td>05:00:00 PM</td>
-            <td>10hr</td>
-            <td>OK/OK</td>
-            <td>
-              <a href='#'><i class="fas fa-edit"></i></a>
-              <a href="#"><i class="far fa-trash-alt"></i></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      
+      <div class="attendance-wrapper">
+        <div class="attendance-scroll">
+          <table id="attendance" class="display nowrap">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Employee</th>
+                <th>Time In</th>
+                <th>Time Out</th>
+                <th>Total Hours</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row" class="odd">
+                <td>01-01-2020</td>
+                <td>Dono</td>
+                <td>07:00:00 AM</td>
+                <td>05:00:00 PM</td>
+                <td>8hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>02-02-2020</td>
+                <td>Kasion</td>
+                <td>08:00:00 AM</td>
+                <td>03:00:00 PM</td>
+                <td>9hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="odd">
+                <td>03-03-2020</td>
+                <td>Indro</td>
+                <td>02:00:00 AM</td>
+                <td>09:00:00 PM</td>
+                <td>10hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+              <tr role="row" class="even">
+                <td>04-04-2020</td>
+                <td>Doyok</td>
+                <td>11:00:00 AM</td>
+                <td>12:00:00 PM</td>
+                <td>11hr</td>
+                <td>OK/OK</td>
+                <td>
+                  <a href='#'><i class="fas fa-edit"></i></a>
+                  <a href="#"><i class="far fa-trash-alt"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+      
     </div>
 </div>
   
